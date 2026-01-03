@@ -58,7 +58,6 @@ h1 {
   max-width: 400px;
   min-width: 280px;
   min-height: clamp(300px, 20vh, 700px);
-  background-color: #f8f8f0;
 }
 
 @media (max-width: 1000px) {
@@ -80,7 +79,80 @@ h1 {
 #players-container {
   width: 100%;
   flex: 2;
-  background-color: #302828;
+}
+
+ol {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.75rem, 2vw, 2rem);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.player {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: clamp(56px, 8vw, 100px);
+  border: clamp(2px, 0.6vw, 5px) solid #E0C8A8;
+  box-shadow: 0 3px 0 #302828, 0 6px 12px rgba(0, 0, 0, 0.35);
+  padding: 0 clamp(0.75rem, 2vw, 1.5rem);
+  gap: clamp(0.5rem, 2vw, 1rem);
+}
+
+.active {
+  border: clamp(2px, 0.6vw, 5px) solid #302828;
+  box-shadow: 0 3px 0 #302828, 0 6px 12px rgba(0, 0, 0, 0.35);
+}
+
+.player-name {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.5rem, 2vw, 1rem);
+  font-size: clamp(1rem, 1.8vw, 1.5rem);
+  flex: 1;
+  min-width: 0;
+}
+
+.text {
+  width: auto;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.player-name span {
+  font-size: clamp(1rem, 1.8vw, 1.5rem);
+}
+
+.player-name input {
+  flex: 1;
+  min-width: 0;
+  font: inherit;
+  line-height: inherit;
+  color: inherit;
+  padding-left: 10px;
+  margin: 0;
+  background: transparent;
+  border: #302828 3px solid;
+  outline: none;
+}
+
+.player-symbol {
+  margin-left: auto;
+  flex-shrink: 0;
+  font-weight: bold;
+  font-size: clamp(1rem, 2.2vw, 1.4rem);
+}
+
+.player button {
+  flex: 0 0 auto;
+  width: clamp(70px, 15vw, 100px);
+  height: clamp(28px, 4vw, 36px);
+  font-size: clamp(0.9rem, 2.2vw, 1.2rem);
+  background: none;
+  border: clamp(2px, 0.5vw, 3px) solid #302828;
 }
 
 #logs-container {
