@@ -1,0 +1,29 @@
+body {
+  margin: auto;
+  max-width: 1200px;
+  font-family: "Space Grotesk";
+}
+
+header {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+}
+
+img {
+  width: 20rem;
+  flex-shrink: 1;
+  max-width: 100%;
+}
+
+h1 {
+  margin: 0;
+  font-size: 9vw;
+  line-height: 1.2;
+  flex-shrink: 2;
+  max-width: 100%;
+  color: #302828;
+}
