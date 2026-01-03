@@ -1,8 +1,11 @@
 function App() {
   return (
     <div id="game-container">
-      <div id="board-container"></div>
-      <div id="info-container"></div>
+      <section id="board-container"></section>
+      <section id="info-container">
+        <div id="players-container"></div>
+        <div id="logs-container"></div>
+      </section>
     </div>
   );
 }

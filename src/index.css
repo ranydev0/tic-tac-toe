@@ -51,6 +51,9 @@ h1 {
 }
 
 #info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   flex: 1 1 300px;
   max-width: 400px;
   min-width: 280px;
@@ -62,7 +65,29 @@ h1 {
   #board-container,
   #info-container {
     flex: 1 1 700px;
+    flex-direction: row;
     max-width: 700px;
     width: min(700px, 100%);
   }
+
+  #players-container,
+  #logs-conatiner {
+    flex: 1;
+    height: 100%;
+  }
+}
+
+#players-container {
+  width: 100%;
+  flex: 2;
+  background-color: #302828;
+}
+
+#logs-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  flex: 1;
+  background-color: #f8f8f0;
 }
