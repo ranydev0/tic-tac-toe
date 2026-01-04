@@ -85,8 +85,12 @@ h1 {
     width: min(700px, 100%);
   }
 
+  #info-container {
+    min-height: clamp(140px, 14vh, 420px);
+  }
+
   #players-container,
-  #logs-conatiner {
+  #logs-container {
     flex: 1;
     height: 100%;
   }
@@ -94,7 +98,7 @@ h1 {
 
 #players-container {
   width: 100%;
-  flex: 2;
+  flex: 1;
 }
 
 ol {
@@ -177,7 +181,6 @@ ol {
   align-items: center;
   width: 100%;
   flex: 1;
-  background-color: #f8f8f0;
 }
 
 #game-board {
