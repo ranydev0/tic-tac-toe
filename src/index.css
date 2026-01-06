@@ -136,10 +136,13 @@ ol {
 }
 
 .text {
+  flex: 1;
   width: auto;
   min-width: 0;
   overflow: hidden;
   white-space: nowrap;
+  padding-left: 10px;
+  box-sizing: border-box;
 }
 
 .player-name span {
@@ -148,6 +151,7 @@ ol {
 
 .player-name input {
   flex: 1;
+  width: 100%;
   min-width: 0;
   font: inherit;
   line-height: inherit;
@@ -156,6 +160,7 @@ ol {
   margin: 0;
   background: transparent;
   border: #302828 3px solid;
+  box-sizing: border-box;
   outline: none;
 }
 

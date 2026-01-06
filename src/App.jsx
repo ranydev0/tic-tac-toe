@@ -1,3 +1,5 @@
+import Player from "./components/Player";
+
 function App() {
   const initialGameBoard = [
     [null, null, null],
@@ -6,7 +8,7 @@ function App() {
   ];
 
   return (
-    <div id="game-container">
+    <main id="game-container">
       <section id="board-container">
         <ol id="game-board">
           {initialGameBoard.map((row, rowIndex) =>
@@ -21,25 +23,13 @@ function App() {
       <section id="info-container">
         <div id="players-container">
           <ol>
-            <li className="player active">
-              <span className="player-name">
-                <span className="text">Player 1</span>
-                <span className="player-symbol">X</span>
-              </span>
-              <button>Edit</button>
-            </li>
-            <li className="player">
-              <span className="player-name">
-                <span className="text">Player 2</span>
-                <span className="player-symbol">O</span>
-              </span>
-              <button>Edit</button>
-            </li>
+            <Player initialName="Player 1" symbol="X" />
+            <Player initialName="Player 2" symbol="O" />
           </ol>
         </div>
         <div id="logs-container"></div>
       </section>
-    </div>
+    </main>
   );
 }
 
