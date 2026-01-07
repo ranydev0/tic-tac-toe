@@ -1,24 +1,11 @@
 import Player from "./components/Player";
+import GameBoard from "./components/GameBoard";
 
 function App() {
-  const initialGameBoard = [
-    [null, null, null],
-    [null, null, null],
-    [null, null, null],
-  ];
-
   return (
     <main id="game-container">
       <section id="board-container">
-        <ol id="game-board">
-          {initialGameBoard.map((row, rowIndex) =>
-            row.map((col, colIndex) => (
-              <li key={`${rowIndex}-${colIndex}`}>
-                <button className="game-button">{col}</button>
-              </li>
-            ))
-          )}
-        </ol>
+        <GameBoard />
       </section>
       <section id="info-container">
         <div id="players-container">

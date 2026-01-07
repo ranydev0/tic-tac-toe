@@ -178,6 +178,7 @@ ol {
   font-size: clamp(0.9rem, 2.2vw, 1.2rem);
   background: none;
   border: clamp(2px, 0.5vw, 3px) solid #302828;
+  cursor: pointer;
 }
 
 #logs-container {
