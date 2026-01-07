@@ -17,13 +17,14 @@ function GameBoard({ onSelectSquare, turns }) {
   return (
     <ol id="game-board">
       {gameBoard.map((row, rowIndex) =>
-        row.map((col, colIndex) => (
+        row.map((playerSymbol, colIndex) => (
           <li key={`${rowIndex}-${colIndex}`}>
             <button
               className="game-button"
               onClick={() => onSelectSquare({ rowIndex, colIndex })}
+              disabled={playerSymbol ? true : false}
             >
-              {col}
+              {playerSymbol}
             </button>
           </li>
         ))
