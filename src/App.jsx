@@ -92,10 +92,11 @@ function App() {
   return (
     <main id="game-container">
       <section id="board-container">
-        {(winner || hasDraw) && (
+        {winner || hasDraw ? (
           <GameOver winner={winner} onRestart={handleRestart} />
+        ) : (
+          <GameBoard onSelectSquare={handleSelectSquare} board={gameBoard} />
         )}
-        <GameBoard onSelectSquare={handleSelectSquare} board={gameBoard} />
       </section>
       <section id="info-container">
         <div id="players-container">
@@ -114,7 +115,7 @@ function App() {
             />
           </ol>
         </div>
-        <Log turns={gameTurns} />
+        <Log turns={gameTurns} players={players} />
       </section>
     </main>
   );
