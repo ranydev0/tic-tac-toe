@@ -54,12 +54,6 @@ h1 {
   background-color: #e0c8a8;
 }
 
-@media (max-width: 650px) {
-  #game-container {
-    flex-wrap: wrap-reverse;
-  }
-}
-
 #board-container {
   flex: 1 1 600px;
   max-width: 700px;
@@ -78,7 +72,20 @@ h1 {
   flex: 1 1 300px;
   max-width: 650px;
   min-width: 280px;
-  min-height: clamp(300px, 20vh, 700px);
+  min-height: clamp(150px, 20vh, 700px);
+}
+
+@media (max-width: 650px) {
+  #game-container {
+    flex-wrap: wrap-reverse;
+    gap: 0.5rem;
+    padding: 5px;
+  }
+
+  #info-container {
+    flex-direction: row;
+    gap: 5px;
+  }
 }
 
 #players-container {
@@ -166,8 +173,11 @@ ol {
   height: clamp(28px, 4vw, 36px);
   font-size: clamp(0.9rem, 2.2vw, 1.2rem);
   background: none;
+  color: #302828;
   border: clamp(2px, 0.5vw, 3px) solid #302828;
   cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 #logs-container {
